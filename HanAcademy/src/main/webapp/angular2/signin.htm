@@ -1,0 +1,58 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center" >
+      <h1>Contact Us</h1>
+    </div>
+    <div class="col-md-12 text-center" >
+      <div class="row">
+        <div class="col-md-6">
+          <p class="lead">Sign In</p>
+          <form class="form-horizontal">
+            <div>
+              <input class="form-control" name = "email" type = "email" ng-model = "email" length = "100" required>
+              <span style = "color:red" ng-show = "contactUsForm.email.$dirty && contactUsForm.email.$invalid">
+                <span ng-show = "contactUsForm.email.$error.required">Email is required.</span>
+                <span ng-show = "contactUsForm.email.$error.email">Invalid email address.</span>
+             </span>
+            </div>
+            <div>
+              <input class="form-control" name = "Password" type = "password" ng-model = "password" length = "100" required>
+              <span style = "color:red" ng-show = "contactUsForm.password.$dirty && contactUsForm.password.$invalid">
+                <span ng-show = "contactUsForm.password.$error.required">Password is required.</span>
+                <span ng-show = "contactUsForm.password.$error.email">Invalid Password.</span>
+             </span>
+            </div>
+            <br>
+            <a class="btn btn-lg btn-primary" href="#fork">Sign In</a>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <p class="lead">Sign Up</p>
+          <div>
+            <input class="form-control" name = "name" type = "text" ng-model = "name" required>
+            <span style = "color:red" ng-show = "contactUsForm.name.$dirty && contactUsForm.name.$invalid">
+              <span ng-show = "contactUsForm.name.$error.required">First Name is required.</span>
+            </span>
+          </div>
+          <div>
+            <input class="form-control" name = "email" type = "email" ng-model = "email" length = "100" required>
+            <span style = "color:red" ng-show = "contactUsForm.email.$dirty && contactUsForm.email.$invalid">
+              <span ng-show = "contactUsForm.email.$error.required">Email is required.</span>
+              <span ng-show = "contactUsForm.email.$error.email">Invalid email address.</span>
+           </span>
+          </div>
+          <div>
+            <input class="form-control" name = "Password" type = "password" ng-model = "password" length = "100" required>
+            <span style = "color:red" ng-show = "contactUsForm.password.$dirty && contactUsForm.password.$invalid">
+              <span ng-show = "contactUsForm.password.$error.required">Password is required.</span>
+              <span ng-show = "contactUsForm.password.$error.email">Invalid Password.</span>
+           </span>
+          </div>
+          <br>
+          <a class="btn btn-lg btn-primary" href="#fork">Sign In</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

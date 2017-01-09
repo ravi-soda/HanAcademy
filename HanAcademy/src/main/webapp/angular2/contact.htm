@@ -1,0 +1,44 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center" >
+      <h1>Contact Us</h1>
+    </div>
+    <div class="col-md-12 text-left" >
+      <div class="row">
+        <div class="col-md-6">
+          <p class="lead">Contact With Us:-</p>
+          <br>
+          <p><strong>Phone :</strong>123.456.7890</p>
+          <p><strong>Email :</strong>name@example.com</p>
+          <p><strong>Address :</strong>3841 Melrose place, Beverly Hills, Chicago 90210.</p>
+          
+        </div>
+        <div class="col-md-6">
+          <div>
+            <input class="form-control" name = "name" type = "text" ng-model = "name" required>
+            <span style = "color:red" ng-show = "contactUsForm.name.$dirty && contactUsForm.name.$invalid">
+              <span ng-show = "contactUsForm.name.$error.required">First Name is required.</span>
+            </span>
+          </div>
+          <div>
+            <input class="form-control" name = "email" type = "email" ng-model = "email" length = "100" required>
+            <span style = "color:red" ng-show = "contactUsForm.email.$dirty && contactUsForm.email.$invalid">
+              <span ng-show = "contactUsForm.email.$error.required">Email is required.</span>
+              <span ng-show = "contactUsForm.email.$error.email">Invalid email address.</span>
+           </span>
+          </div>
+          <div>
+            <textarea class="form-control" rows="10" cols="60" ng-model="message" required>
+            </textarea>
+            <span style = "color:red" ng-show = "contactUsForm.message.$dirty && contactUsForm.message.$invalid">
+              <span ng-show = "contactUsForm.message.$error.required">Message is required.</span>
+           </span>
+          </div>
+          <br>
+          <a class="btn btn-lg btn-primary" href="#fork">Send</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
