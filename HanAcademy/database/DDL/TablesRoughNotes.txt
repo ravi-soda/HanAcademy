@@ -1,0 +1,78 @@
+
+tables
+----------
+ADMIN_USER
+	adminUserID INTEGER,
+	adminUsername VARCHAR2(50),
+	adminPassword VARCHAR2(50),
+	
+	
+NEWS
+	title VARCHAR2(150),
+	desc VARCHAR2(300)
+	stDate datetime,
+	endDate datetime
+
+COURSES
+	courseID INTEGER,
+	courseName VARCHAR2(50),
+	courseDesc VARCHAR2(300)
+	
+COURSE_SUBJECT_MAP
+	courseSubMapID INTEGER,
+	courseID INTEGER,
+	subjID INTEGER,
+	
+SUBJECTS
+	subjID INTEGER,
+	subjTitle VARCHAR2(150),
+	subjDesc VARCHAR2(300),
+	subjCost NUMBER(2)
+	
+SCHEDULES
+	schID INTEGER,
+	schTitle VARCHAR2(150),
+	schDesc VARCHAR2(1000),
+	
+	
+STUDENTS
+	studID INTEGER,
+	studName VARCHAR2(250),
+	studAge UNSIGNEDSHORTINT,
+	studGradeID INTEGER,
+	studEmail VARCHAR2(100)
+	
+GRADES
+	gradeID INTEGER,
+	gradeTitle VARCHAR2(30)
+	
+STUDENT_COURSE_MAP
+	stuID INTEGER,
+	schID INTEGER
+	
+	
+PARENT_USER
+	parentID INTEGER,
+	firstName VARCHAR2(100),
+	lastName VARCHAR2(100),
+	emailID VARCHAR2(100),
+	phoneNumber VARCHAR2(30),
+	faxNo VARCHAR2(30),
+	username VARCHAR2(50),
+	password VARCHAR2(50),
+	firstTimeLogin BIT,
+	
+REGISTRATION
+	regID INTEGER,
+	schID INTEGER,
+	parentID INTEGER,
+	regOn datetime,
+	regBy INTEGER,
+	status VARCHAR2(30)
+	
+
+REGISTRATION_INTERACTIONS
+	interactionID INTEGER,
+	userID INTEGER,
+	msg VARCHAR2(500),
+	regID INTEGER
