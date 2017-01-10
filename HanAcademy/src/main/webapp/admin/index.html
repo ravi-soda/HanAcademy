@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>AngularJS Plunker</title>
+  <script>
+    document.write('<base href="' + document.location + '" />');
+  </script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="app.js"></script>
+</head>
+
+<body ng-app="plunker">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-3 col-sm-3 col-xs-3 test-left">
+            <span>HAN ACADEMY</span>
+          </div>
+          <div class="col-md-9 col-sm-9 col-xs-9 text-right">
+            <span>Welcome guest</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <a href="#registration">registration</a> 
+      </div>
+      <!-- ng-view -->
+      <div class="col-md-10 col-sm-12 col-xs-12">
+        <div ng-view ></div>
+      </div>
+      <!-- End: ng-view-->
+    </div>
+  </div>
+</body>
+
+</html>
