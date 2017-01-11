@@ -46,8 +46,19 @@
             templateUrl : "signin.htm"
         })
         .when("/contact", {
-            templateUrl : "contact.htm"
+            templateUrl : "contact.htm",
+            controller : "contactCtrl"
         });
+    });
+    
+    app.controller("contactCtrl", function($scope, $http){
+    	console.log("Inside contactCtrl Controller.")
+    	
+    	$http.get('http://localhost:8082/HanAcademy/restful/hello')
+  			.then(function(response){
+    		$scope.msg = response.data;
+    	});
+    	
     });
   </script>
 

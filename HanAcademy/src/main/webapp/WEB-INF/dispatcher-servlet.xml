@@ -11,9 +11,18 @@ http://www.springframework.org/schema/mvc
 http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 	<context:component-scan base-package="com.springweb"></context:component-scan>
+	
+	<!-- this is used to read and write the json values of models with hibernate -->
+	<bean id="messageConverter"
+		class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+	</bean>
 
 	<!-- using spring mvc for view -->
-	<mvc:annotation-driven ></mvc:annotation-driven>
+	<mvc:annotation-driven >
+		<mvc:message-converters>
+			<ref bean="messageConverter"/>
+		</mvc:message-converters>
+	</mvc:annotation-driven>
 	
 	<mvc:resources location="/views/client/" mapping="/views/client/**"></mvc:resources>
 	<mvc:resources location="/views/admin/" mapping="/views/admin/**"></mvc:resources>

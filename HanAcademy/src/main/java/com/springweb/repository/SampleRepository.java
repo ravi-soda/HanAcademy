@@ -21,7 +21,7 @@ public class SampleRepository {
   public void execQuery() {
 
     String result;
-    JdbcTemplate jdbcTemplate = null;
+    //JdbcTemplate jdbcTemplate = null;
     try {
 
       //jdbcTemplate = new JdbcTemplate(this.excaliburDS);
