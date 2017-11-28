@@ -1,0 +1,32 @@
+This kind of error occurs when you write in a dependency for a controller, service, etc, and you haven't created or included that dependency.
+
+In this case, $modal isn't a known service. It sounds like you didn't pass in ui-bootstrap as a dependency when bootstrapping angular. angular.module('myModule', ['ui.bootstrap']); Also, be sure you are using the latest version of ui-bootstrap (0.6.0), just to be safe.
+
+The error is thrown in version 0.5.0, but updating to 0.6.0 does make the $modal service available. So, update to version 0.6.0 and be sure to require ui.boostrap when registering your module.
+
+Replying to your comment: This is how you inject a module dependency.
+
+<!-- tell Angular what module we are bootstrapping -->
+<html ng-app="myApp" ng-controller="myCtrl">
+js:
+
+// create the module, pass in modules it depends on
+var app = angular.module('myApp', ['ui.bootstrap']);
+
+// $modal service is now available via the ui.bootstrap module we passed in to our module
+app.controller('myCtrl', function($scope, $uibModal) {
+
+});
+Update:
+
+The $modal service has been renamed to $uibModal.
+
+Example using $uibModal
+
+// create the module, pass in modules it depends on
+var app = angular.module('myApp', ['ui.bootstrap']);
+
+// $modal service is now available via the ui.bootstrap module we passed in to our module
+app.controller('myCtrl', function($scope, $uibModal) {
+    //code here
+});
