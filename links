@@ -29,6 +29,7 @@ http://microservices.io/patterns/data/cqrs.html *
 http://microservices.io/patterns/data/event-sourcing.html *
 http://microservices.io/patterns/monolithic.html *
 http://microservices.io/patterns/microservices.html *
+http://eventuate.io/presentations.html *
 
 log4js - A port for JavaScript. Log4js is available under the licence of Apache Software Foundation. One special feature of Log4js is the ability to log the events of the browser remotely on the server. Using Ajax it is possible to send the logging events in several formats (XML, JSON, plain ASCII, etc.) to the server to be evaluated there. The following appenders are implemented for log4js: AjaxAppender, ConsoleAppender, FileAppender, JSConsoleAppender, MetatagAppender, and WindowsEventsAppender. The following Layout classes are provided: BasicLayout, HtmlLayout, JSONLayout, and XMLLayout. Last version is 1.1, released in 2008.[25]
 
