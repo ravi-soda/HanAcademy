@@ -3,3 +3,34 @@ Elasticsearch is developed alongside a data-collection and log-parsing engine ca
 KIBANA is an open source data visualization plugin for Elasticsearch. It provides visualization capabilities on top of the content indexed on an Elasticsearch cluster. Users can create bar, line and scatter plots, or pie charts and maps on top of large volumes of data.[3]
 
 The combination of Elasticsearch, Logstash, and Kibana (also known as ELK stack or Elastic stack) is available as products or service.[4] Logstash provides an input stream to Elastic for storage and search, and Kibana accesses the data for visualizations such as dashboards.[5] 
+
+Redis maps keys to types of values. An important difference between Redis and other structured storage systems is that Redis supports not only strings, but also abstract data types:
+
+Lists of strings
+Sets of strings (collections of non-repeating unsorted elements)
+Sorted sets of strings (collections of non-repeating elements ordered by a floating-point number called score)
+Hash tables where keys and values are strings
+HyperLogLogs used for approximated set cardinality size estimation.
+Geospatial data through the implementation of the geohash technique since Redis 3.2.[18]
+The type of a value determines what operations (called commands) are available for the value itself. Redis supports high-level, atomic, server-side operations like intersection, union, and difference between sets and sorting of lists, sets and sorted sets.
+
+By default, Redis writes data to a file system at least every 2 seconds, with more or less robust options available if needed. In the case of a complete system failure on default settings, only a few seconds of data would be lost.
+
+Clustering[edit]
+Redis introduced clustering in April 2015 with the release of version 3.0.[22] The cluster specification implements a subset of Redis commands: all single-key commands are available, multi-key operations (commands related to unions and intersections) are restricted to keys belonging to the same node, and commands related to database selection operations are unavailable.[23] A Redis cluster is able to scale up to 1,000 nodes, achieve "acceptable" write safety and to continue operations when some nodes fail.[24][25]
+
+Use cases[edit]
+Due to the nature of the database design, typical use cases are session caching, full page cache, message queue applications, leaderboards and counting among others.[26] Large companies such as Twitter are using Redis,[27] and Amazon Web Services is offering Redis in its portfolio.
+
+Replication[edit]
+Redis supports master-slave replication. Data from any Redis server can replicate to any number of slaves. A slave may be a master to another slave. This allows Redis to implement a single-rooted replication tree. Redis slaves can be configured to accept writes, permitting intentional and unintentional inconsistency between instances. The Publish/Subscribe feature is fully implemented, so a client of a slave may SUBSCRIBE to a channel and receive a full feed of messages PUBLISHed to the master, anywhere up the replication tree. Replication is useful for read (but not write) scalability or data redundancy.[20]
+
+http://microservices.io/patterns/data/cqrs.html *
+http://microservices.io/patterns/data/event-sourcing.html *
+http://microservices.io/patterns/monolithic.html *
+http://microservices.io/patterns/microservices.html *
+
+log4js - A port for JavaScript. Log4js is available under the licence of Apache Software Foundation. One special feature of Log4js is the ability to log the events of the browser remotely on the server. Using Ajax it is possible to send the logging events in several formats (XML, JSON, plain ASCII, etc.) to the server to be evaluated there. The following appenders are implemented for log4js: AjaxAppender, ConsoleAppender, FileAppender, JSConsoleAppender, MetatagAppender, and WindowsEventsAppender. The following Layout classes are provided: BasicLayout, HtmlLayout, JSONLayout, and XMLLayout. Last version is 1.1, released in 2008.[25]
+
+http://cqrs.nu/tutorial/cs/01-design (learn DDD, Event sourcing, CQRS)
+https://lostechies.com/jimmybogard/2011/10/11/event-sourcing-as-a-strategic-advantage/
