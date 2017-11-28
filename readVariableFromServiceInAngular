@@ -1,0 +1,20 @@
+How to read a variable from service in angularjs
+
+Services are created with new and as a result will expose whatever is attached to this. Simply add a function that returns your messages array to this.
+
+myModule.service('notify', ['$window', function(win) {  
+    var msgs = []; // I want to read this variable
+
+    this.message = function(msg) {
+        msgs.push(msg);
+
+        if (msgs.length == 3) {
+            win.alert(msgs.join("\n"));
+            msgs = [];
+        }
+    };
+
+    this.getMessages = function () {
+        return msgs;
+    }
+ }]);
