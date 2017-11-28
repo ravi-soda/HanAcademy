@@ -35,3 +35,12 @@ log4js - A port for JavaScript. Log4js is available under the licence of Apache 
 
 http://cqrs.nu/tutorial/cs/01-design (learn DDD, Event sourcing, CQRS)
 https://lostechies.com/jimmybogard/2011/10/11/event-sourcing-as-a-strategic-advantage/
+
+
+Polyglot persistence?
+materialized views?
+temporal queries?
+Eureka?AWS?
+Docker? Kubernetis?
+logstash?
+springCloud?
